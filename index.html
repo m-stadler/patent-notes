@@ -1,46 +1,145 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Meine erste Webseite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patentrechtskurs – Übersicht</title>
   <style>
+    :root {
+      --primary: #004aad;
+      --light-bg: #f4f4f4;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #f5f5f5;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.6;
+      background: var(--light-bg);
+      color: #333;
     }
+
     header {
-      background-color: #4a90e2;
+      background: var(--primary);
       color: white;
-      padding: 1rem;
+      padding: 1.5rem;
       text-align: center;
-      border-radius: 8px;
     }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
     section {
-      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
-    h1 {
-      margin: 0;
+
+    h1, h2 {
+      color: var(--primary);
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Willkommen auf meiner ersten Webseite 👋</h1>
+    <h1>Patentrechtskurs</h1>
+    <nav>
+      <a href="#beschreibung">Kursbeschreibung</a>
+      <a href="#termine">Termine</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>Über mich</h2>
-    <p>Hallo! Ich lerne gerade, wie man Webseiten baut. 🎉</p>
-  </section>
+  <div class="container">
 
-  <section>
-    <h2>Kontakt</h2>
-    <p>Du kannst mich unter <a href="mailto:beispiel@mail.de">beispiel@mail.de</a> erreichen.</p>
-  </section>
+    <section id="beschreibung">
+      <h2>Kursbeschreibung</h2>
+      <p>
+        Der Patentrechtskurs bietet eine fundierte Einführung in die rechtlichen Grundlagen
+        des gewerblichen Rechtsschutzes, mit Fokus auf nationale und internationale
+        Patentverfahren. Der Kurs richtet sich an Studierende, Nachwuchsjurist:innen,
+        Ingenieur:innen und alle, die sich mit Innovationsschutz beschäftigen möchten.
+      </p>
+      <p>
+        Behandelt werden unter anderem:
+      </p>
+      <ul>
+        <li>Patentanmeldung und -erteilungsverfahren</li>
+        <li>Rechtswirkungen und Schutzbereich von Patenten</li>
+        <li>Europäisches und internationales Patentrecht</li>
+        <li>Durchsetzung und Verteidigung von Patenten</li>
+      </ul>
+    </section>
+
+    <section id="termine">
+      <h2>Termine & Inhalte</h2>
+      <ul>
+        <li><strong>Vorlesung 1:</strong> Einführung und Grundlagen – 15. Oktober</li>
+        <li><strong>Vorlesung 2:</strong> Patentanmeldung – 22. Oktober</li>
+        <li><strong>Vorlesung 3:</strong> Internationale Verfahren – 29. Oktober</li>
+        <li><strong>Vorlesung 4:</strong> Schutzumfang & Verteidigung – 5. November</li>
+      </ul>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>
+        Bei Fragen zum Kurs wenden Sie sich bitte an:
+      </p>
+      <p>
+        📧 <a href="mailto:patentrecht@example.com">patentrecht@example.com</a>
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2025 Patentrechtskurs – Alle Rechte vorbehalten
+  </footer>
 
 </body>
 </html>
